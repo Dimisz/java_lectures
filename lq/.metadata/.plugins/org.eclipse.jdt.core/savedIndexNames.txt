@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/Users/mbpro/Desktop/eclipse_projects/lq/.metadata/.plugins/org.eclipse.jdt.core
+1865797976.index
+4037884708.index
+2452335066.index
