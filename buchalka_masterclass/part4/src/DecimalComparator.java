@@ -9,14 +9,14 @@ public class DecimalComparator {
 
     }
 
-    public static double makeThreeDecimal(double num){
-        int tempNum = (int)(num * 1000);
-        return ((double)tempNum/1000.0);
-    }
+//    public static double makeThreeDecimal(double num){
+//        int tempNum = (int)(num * 1000);
+//        return ((double)tempNum/1000.0);
+//    }
 
     public static boolean areEqualByThreeDecimalPlaces(double num1, double num2){
-        double num1Shaped = makeThreeDecimal(num1);
-        double num2Shaped = makeThreeDecimal(num2);
+        double num1Shaped = ((double)((int)(num1*1000))/1000.0);
+        double num2Shaped = ((double)((int)(num2*1000))/1000.0);
         return num1Shaped == num2Shaped;
     }
 }
