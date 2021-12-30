@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+/Users/mbpro/Desktop/eclipse_projects/java_lectures/lq/.metadata/.plugins/org.eclipse.jdt.core
-2888586291.index
-2452335066.index
-1865797976.index
