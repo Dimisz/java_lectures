@@ -4,7 +4,7 @@ public class MethodsOverloading {
 //        calculateScore("Dimi", 30);
 //        calculateScore(6, 0);
 
-        System.out.println(calcFeetAndInchesToCentimeters(6, 0));
+        System.out.println(calcFeetAndInchesToCentimeters(-1, 5));
     }
 
     public static int calculateScore(String playerName, int score){
