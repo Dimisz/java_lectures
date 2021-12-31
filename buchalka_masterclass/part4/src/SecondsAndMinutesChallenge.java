@@ -1,18 +1,18 @@
 public class SecondsAndMinutesChallenge {
 
+    private static final String INVALID_VALUE_MESSAGE = "Invalid value";
+
     public static void main(String[] args) {
-        System.out.println("First double-arg method:");
-        System.out.println("Invalid params:");
-        System.out.println(getDurationString(340, 350));
-        System.out.println("invalid params: ");
-        System.out.println(getDurationString(-1, -2));
-        System.out.println(getDurationString(3660));
+        System.out.println(getDurationString(65, 45));
+        System.out.println(getDurationString(3945));
+        System.out.println(getDurationString(-41));
+        System.out.println(getDurationString(65, 9));
     }
 
 
     public static String getDurationString(int minutes, int seconds){
         if (minutes < 0 || (seconds < 0 || seconds > 59)){
-            return "Invalid value";
+            return INVALID_VALUE_MESSAGE;
         }
         else {
             int totalSeconds = seconds + minutes * 60;
@@ -40,7 +40,7 @@ public class SecondsAndMinutesChallenge {
 
     public static String getDurationString(int seconds){
         if(seconds < 0){
-            return "Invalid value";
+            return INVALID_VALUE_MESSAGE;
         }
         else {
             int mins = seconds / 60;
