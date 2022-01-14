@@ -5,8 +5,8 @@ public class MinAndMaxInputChallenge {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int min = 0;
-        int max = 0;
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
         int counter = 0;
 
         while (true) {
@@ -17,19 +17,16 @@ public class MinAndMaxInputChallenge {
             }
             int userNum = scanner.nextInt();
             scanner.nextLine();
-            if (counter == 0){
-                min = userNum;
-                max = userNum;
-            }
-            else {
+
+
                 if (userNum < min) {
                     min = userNum;
                 }
                 if (userNum > max) {
                     max = userNum;
                 }
-            }
-            counter++;
+
+
         }
         scanner.close();
         System.out.println("Min is: " + min);
