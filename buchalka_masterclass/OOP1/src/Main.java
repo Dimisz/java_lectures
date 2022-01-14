@@ -27,5 +27,16 @@ public class Main {
         person.setLastName("Smith");    // lastName is set to Smith
         System.out.println("fullName= " + person.getFullName());
 
+        System.out.println("\n\n=========TESTING BANK=============");
+        BankAccount account = new BankAccount();
+        account.setAccountNumber(123456);
+        account.setCustomerName("Vladimir Solovyov");
+        account.setBalance(20000);
+        account.printAccountReport();
+        account.withdraw(30000);
+        account.deposit(15);
+        account.withdraw(1000);
+        account.printAccountReport();
+
     }
 }
