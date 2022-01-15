@@ -1,15 +1,33 @@
-public class BankAccount {
-    private int accountNumber;
-    private double balance;
-    String customerName;
-    String email;
-    String phoneNumber;
+import java.sql.SQLOutput;
 
-    public void setAccountNumber(int accountNumber){
+public class BankAccount {
+    private String accountNumber;
+    private double balance;
+    private String customerName;
+    private String email;
+    private String phoneNumber;
+
+    public BankAccount(){
+        System.out.println("Empty constructor called...");
+    }
+
+    public BankAccount(String accountNumber, double balance, String customerName,
+                       String email, String phoneNumber){
+        System.out.println("Calling parametrized constructor");
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
+
+
+    public void setAccountNumber(String accountNumber){
         this.accountNumber = accountNumber;
     }
 
-    public int getAccountNumber(){
+    public String getAccountNumber(){
         return accountNumber;
     }
 
