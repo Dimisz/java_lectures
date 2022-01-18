@@ -9,15 +9,24 @@ public class PC {
         this.motherboard = motherboard;
     }
 
-    public Case getPCCase() {
+    private Case getPCCase() {
         return PCCase;
     }
 
-    public Monitor getMonitor() {
+    private Monitor getMonitor() {
         return monitor;
     }
 
-    public Motherboard getMotherboard() {
+    private Motherboard getMotherboard() {
         return motherboard;
+    }
+
+    private void drawLogo(){
+        System.out.println("drawing logo");
+        getMonitor().drawPixelAt(1200, 50, "yellow");
+    }
+    public void powerUp(){
+        getPCCase().pressPowerButton();
+        drawLogo();
     }
 }
