@@ -1,12 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        Printer printer1 = new Printer(80, 0, false);
-        printer1.report();
-        printer1.printPage(230);
-        printer1.printPage(100);
-        printer1.fillToner(12);
-        printer1.report();
-        printer1.fillToner(100);
-        printer1.report();
+        Printer printer = new Printer(50, true);
+        System.out.println(printer.addToner(50));
+        System.out.println("initial page count: " + printer.getPagesPrinted());
+        int pagesPrinted = printer.printPages(4);
+        System.out.println("Pages printed was: " + pagesPrinted + " new total print counnt for the printer: " + printer.getPagesPrinted());
+        pagesPrinted = printer.printPages(2);
+        System.out.println("Pages printed was: " + pagesPrinted + " new total print counnt for the printer: " + printer.getPagesPrinted());
+
     }
 }
