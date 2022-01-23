@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GroceryListDriver {
@@ -58,29 +59,38 @@ public class GroceryListDriver {
     }
 
     public static void modifyItem(){
-        System.out.print("Enter item number: ");
-        int itemNumber = scanner.nextInt();
-        scanner.nextLine();
+        System.out.print("Enter the item: ");
+        String itemNum = scanner.nextLine();
         System.out.print("Enter replacement item: ");
         String replacementItem = scanner.nextLine();
-        groceryList.modifyGroceryItem(itemNumber-1, replacementItem);
+        groceryList.modifyGroceryItem(itemNum, replacementItem);
     }
 
     public static void removeItem(){
-        System.out.print("Enter item number: ");
-        int itemNumber = scanner.nextInt();
-        scanner.nextLine();
+        System.out.print("Enter item name: ");
+        String itemNumber = scanner.nextLine();
         groceryList.removeGroceryItem(itemNumber);
     }
 
     public static void searchForItem(){
         System.out.println("Item to search for: ");
         String searchItem = scanner.nextLine();
-        if(groceryList.findItem(searchItem) != null){
+        if(groceryList.onFile(searchItem)){
             System.out.println("Found " + searchItem + " in our grocery list");
         }
         else {
             System.out.println(searchItem + " is not in the shopping list");
         }
+    }
+
+    public static void processArrayList(){
+        ArrayList<String> newArray = new ArrayList<String>();
+        newArray.addAll(groceryList.getGroceryList());
+
+        ArrayList<String> nextArray = new ArrayList<String>(groceryList.getGroceryList());
+
+        String[] myArray = new String[groceryList.getGroceryList().size()];
+        myArray = groceryList.getGroceryList().toArray(myArray);
+
     }
 }
