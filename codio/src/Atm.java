@@ -54,8 +54,10 @@ public class Atm {
 
         //add code below this line
 
-        Atm myAtm = new Atm(1000);
-        myAtm.withdraw(-50);
-        System.out.println(myAtm.getMoney());
+//        Atm myAtm = new Atm(1000);
+//        myAtm.withdraw(-50);
+//        System.out.println(myAtm.getMoney());
+
+
     }
 }
