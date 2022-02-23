@@ -39,6 +39,9 @@ class StudentTest {
                 ((double)student3.averageMathGrade +
                         (double)student3.averageEconomicsGrade +
                         (double)student3.averageForeignLanguageGrade)/3);
+
+
+        
     }
 
 }
