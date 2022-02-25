@@ -41,7 +41,7 @@ class StudentTest {
                         (double)student3.averageForeignLanguageGrade)/3);
 
 
-        
+
     }
 
 }
