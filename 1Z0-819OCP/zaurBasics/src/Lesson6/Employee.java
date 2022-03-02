@@ -8,9 +8,9 @@ public class Employee {
     String department;
 
     Employee(int id, String name, int age){
+
+        this(name, age);
         this.id = id;
-        this.name = name;
-        this.age = age;
     }
 
     Employee(String name, int age){
