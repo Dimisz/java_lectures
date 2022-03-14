@@ -7,6 +7,31 @@ public class ClassicalCD extends Item {
     private String[] performers = new String[5];
     private String recordingLocation;
     private Date releaseDate;
+    private int performerCount = 0;
+
+    public void showPerformers(){
+        if(performerCount > 0) {
+            for (int i = 0; i < performerCount; i++) {
+                System.out.println(performers[i]);
+            }
+        }
+        else{
+            System.out.println("No performers on the list yet");
+        }
+    }
+
+
+    public void addPerformer(String performer){
+        if(performerCount < performers.length){
+            performers[performerCount] = performer;
+            performerCount++;
+        }
+        else {
+            System.out.println("No more performers can be added!");
+        }
+    }
+
+
 
     public String getComposer() {
         return composer;
