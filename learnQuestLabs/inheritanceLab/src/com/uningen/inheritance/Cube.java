@@ -9,27 +9,21 @@ public class Cube extends Box {
     @Override
     public void setLength(double length){
         if(length != super.getLength()){
-            super.setLength(length);
-            super.setHeight(length);
-            super.setWidth(length);
+            setSide(length);
         }
     }
 
     @Override
     public void setWidth(double width){
         if(width != super.getWidth()){
-            super.setLength(width);
-            super.setHeight(width);
-            super.setWidth(width);
+            setSide(width);
         }
     }
 
     @Override
     public void setHeight(double height){
         if(height != super.getHeight()){
-            super.setLength(height);
-            super.setHeight(height);
-            super.setWidth(height);
+            setSide(height);
         }
     }
 
@@ -38,6 +32,9 @@ public class Cube extends Box {
             super.setLength(side);
             super.setHeight(side);
             super.setWidth(side);
+        }
+        else {
+            System.out.println("The dimension specified is not greater than 0");
         }
     }
 
