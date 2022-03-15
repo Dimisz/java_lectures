@@ -5,10 +5,8 @@ public class Item {
     private double price;
     private int quantity;
 
-    public Item(){
+    public Item(){}
 
-    }
-    
     public Item(String title, double price, int quantity){
         this.title = title;
         this.price = price;

@@ -5,6 +5,10 @@ public class Artist {
     private String[] memberNames = new String[20];
     private String[] memberInstruments = new String[20];
 
+    public Artist(String name){
+        this.setName(name);
+    }
+
     public String getName() {
         return name;
     }

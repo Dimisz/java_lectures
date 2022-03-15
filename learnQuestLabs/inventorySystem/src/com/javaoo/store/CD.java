@@ -4,7 +4,14 @@ import java.util.Date;
 
 public class CD extends Item {
     private Artist artist;
-    private Date date;
+    private Date releaseDate;
+
+    public CD(String title, double price, int quantity,
+              Artist artist, Date date){
+        super(title, price, quantity);
+        this.setArtist(artist);
+        this.setReleaseDate(date);
+    }
 
     public Artist getArtist() {
         return artist;
@@ -14,11 +21,11 @@ public class CD extends Item {
         this.artist = artist;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getReleaseDate() {
+        return releaseDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setReleaseDate(Date releaseDate) {
+        this.releaseDate = releaseDate;
     }
 }
