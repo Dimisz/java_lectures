@@ -12,9 +12,14 @@ public class ClassicalCD extends Item {
     public ClassicalCD(String title, double price, int quantity, String composer, String[] performers, String recordingLocation, Date releaseDate) {
         super(title, price, quantity);
         this.composer = composer;
-        this.performers = performers;
         this.recordingLocation = recordingLocation;
         this.releaseDate = releaseDate;
+
+        for(int i = 0; i < performers.length; i++){
+            if(performers[i] != null){
+                addPerformer(performers[i]);
+            }
+        }
     }
 
     public void showPerformers(){
