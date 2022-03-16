@@ -9,6 +9,14 @@ public class ClassicalCD extends Item {
     private Date releaseDate;
     private int performerCount = 0;
 
+    public ClassicalCD(String title, double price, int quantity, String composer, String[] performers, String recordingLocation, Date releaseDate) {
+        super(title, price, quantity);
+        this.composer = composer;
+        this.performers = performers;
+        this.recordingLocation = recordingLocation;
+        this.releaseDate = releaseDate;
+    }
+
     public void showPerformers(){
         if(performerCount > 0) {
             for (int i = 0; i < performerCount; i++) {

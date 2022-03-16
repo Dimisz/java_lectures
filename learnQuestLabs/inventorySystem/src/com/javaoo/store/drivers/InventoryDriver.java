@@ -1,9 +1,6 @@
 package com.javaoo.store.drivers;
 
-import com.javaoo.store.Artist;
-import com.javaoo.store.Book;
-import com.javaoo.store.CD;
-import com.javaoo.store.Item;
+import com.javaoo.store.*;
 
 import java.util.Date;
 
@@ -30,6 +27,13 @@ public class InventoryDriver {
         myInventory[6] = new CD("Going Down The Country", 12.95, 10, new Artist("Bozos"), new Date("09/07/1987"));
         myInventory[7] = new CD("Polka Favorites", 2.95, 4, new Artist("Jimmy and the Yuppers"), new Date("07/07/1955"));
 
+
+        String[] performers1 = {"Henry", "Elizabeth", "Franz", "Arther"};
+        myInventory[8] = new ClassicalCD("Romeo and Julliet", 22.95, 1,
+                "Joe Green", performers1, "New York", new Date("01/01/2011"));
+
+
+        Inventory.produceReport(myInventory);
 
     }
 }
