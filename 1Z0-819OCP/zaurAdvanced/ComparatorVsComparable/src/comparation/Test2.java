@@ -1,0 +1,57 @@
+package comparation;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Test2 {
+    public static void main(String[] args) {
+        List<Employee> list = new ArrayList<>();
+        Employee emp1 = new Employee(100, "Zaur", "Tregulov", 200);
+        Employee emp2 = new Employee(15, "John", "Doe", 150);
+        Employee emp3 = new Employee(2, "Mark", "Janes", 133);
+
+        list.add(emp1);
+        list.add(emp2);
+        list.add(emp3);
+        System.out.println("Before sorting:");
+        System.out.println(list);
+
+        Collections.sort(list);
+        System.out.println("After sorting...");
+        System.out.println(list);
+    }
+}
+
+class Employee implements Comparable<Employee>{
+    int id;
+    String firstName;
+    String secondName;
+    int salary;
+
+    public Employee(int id, String firstName, String secondName, int salary) {
+        this.id = id;
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "\nEmployee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+//        if(id > o.id) return 1;
+//        else if(id == o.id) return 0;
+//        else return -1;
+//        return this.id - o.id;
+        return this.firstName.compareTo(o.firstName);
+    }
+}
