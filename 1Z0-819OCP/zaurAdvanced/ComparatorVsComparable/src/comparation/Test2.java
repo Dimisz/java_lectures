@@ -10,10 +10,12 @@ public class Test2 {
         Employee emp1 = new Employee(100, "Zaur", "Tregulov", 200);
         Employee emp2 = new Employee(15, "John", "Doe", 150);
         Employee emp3 = new Employee(2, "Mark", "Janes", 133);
+        Employee emp4 = new Employee(12, "Mark", "Zanes", 134);
 
         list.add(emp1);
         list.add(emp2);
         list.add(emp3);
+        list.add(emp4);
         System.out.println("Before sorting:");
         System.out.println(list);
 
@@ -52,6 +54,10 @@ class Employee implements Comparable<Employee>{
 //        else if(id == o.id) return 0;
 //        else return -1;
 //        return this.id - o.id;
-        return this.firstName.compareTo(o.firstName);
+        int res = this.firstName.compareTo(o.firstName);
+        if(res == 0){
+            return this.secondName.compareTo(o.secondName);
+        }
+        return res;
     }
 }
