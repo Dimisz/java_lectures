@@ -20,16 +20,16 @@ public class Test2 {
         System.out.println("Before sorting:");
         System.out.println(list);
 
-//        Collections.sort(list);
+        Collections.sort(list);
 //        Collections.sort(list, new IdComparator());
-        Collections.sort(list, new NameComparator());
+//        Collections.sort(list, new NameComparator());
+//        Collections.sort(list, new SalaryComparator());
         System.out.println("After sorting...");
         System.out.println(list);
     }
 }
 
-class Employee {
-        //implements Comparable<Employee>{
+class Employee implements Comparable<Employee>{
     int id;
     String firstName;
     String secondName;
@@ -51,23 +51,24 @@ class Employee {
                 ", salary=" + salary +
                 '}';
     }
-/*
+
     @Override
     public int compareTo(Employee o) {
 //        if(id > o.id) return 1;
 //        else if(id == o.id) return 0;
 //        else return -1;
-//        return this.id - o.id;
-        int res = this.firstName.compareTo(o.firstName);
-        if(res == 0){
-            return this.secondName.compareTo(o.secondName);
-        }
-        return res;
+        return this.id - o.id;
+//        int res = this.firstName.compareTo(o.firstName);
+//        if(res == 0){
+//            return this.secondName.compareTo(o.secondName);
+//        }
+//        return res;
     }
-    */
+
 
 }
 
+/*
 class IdComparator implements Comparator<Employee> {
 
     @Override
@@ -78,6 +79,8 @@ class IdComparator implements Comparator<Employee> {
     }
 }
 
+ */
+
 class NameComparator implements Comparator<Employee>{
     @Override
     public int compare(Employee emp1, Employee emp2){
@@ -86,5 +89,12 @@ class NameComparator implements Comparator<Employee>{
             return emp1.secondName.compareTo(emp2.secondName);
         }
         return nameComparison;
+    }
+}
+
+class SalaryComparator implements Comparator<Employee>{
+    @Override
+    public int compare(Employee emp1, Employee emp2){
+        return emp1.salary - emp2.salary;
     }
 }
