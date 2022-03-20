@@ -21,7 +21,8 @@ public class Test2 {
         System.out.println(list);
 
 //        Collections.sort(list);
-        Collections.sort(list, new IdComparator());
+//        Collections.sort(list, new IdComparator());
+        Collections.sort(list, new NameComparator());
         System.out.println("After sorting...");
         System.out.println(list);
     }
@@ -74,5 +75,16 @@ class IdComparator implements Comparator<Employee> {
         if(o1.id > o2.id) return 1;
         else if(o1.id == o2.id) return 0;
         else return -1;
+    }
+}
+
+class NameComparator implements Comparator<Employee>{
+    @Override
+    public int compare(Employee emp1, Employee emp2){
+        int nameComparison = emp1.firstName.compareTo(emp2.firstName);
+        if(nameComparison == 0){
+            return emp1.secondName.compareTo(emp2.secondName);
+        }
+        return nameComparison;
     }
 }
