@@ -32,6 +32,7 @@ public class Test {
         scholars.addNewParticipant(scholar4);
 
         scholars.playWith(scholarTeam);
+//        scholars.playWith(employeesTeam); // use Team<T> in play with to limit the options to the same type
 
 
     }
