@@ -87,4 +87,51 @@ public class Dog {
         this.owner = owner;
     }
 
+    public String toString(){
+        return "Name: " + name + ", weight: " + weight +
+                     ", age: " + age + ", owner: " + owner;
+    }
+
+
+    public static void main(String[] args) {
+        Dog dog1 = new Dog("Princess", 12.7, 9.3, "Brandon");
+        Dog dog2 = new Dog("Fido", 5.5); //second constructor
+        Dog dog3 = new Dog(); // third no-arg constructor
+
+        System.out.println(dog1);
+        System.out.println(dog2);
+        System.out.println(dog3);
+
+        dog3.setName("Samantha");
+        System.out.println(dog3);
+
+        //call first eat method
+        dog1.eat(2.1, "beneful");
+        System.out.println(dog1);
+
+        //call second eat method
+        dog2.eat(1.1);
+        System.out.println(dog2);
+
+        dog3.eat(1);
+        System.out.println(dog3);
+
+        //call third eat method
+        dog3.eat("12.3");
+        System.out.println(dog3);
+
+        dog3.eat("twelve pounds");
+        System.out.println(dog3);
+
+
+        // call the first bark method
+        dog1.bark(2, "Woof!");
+
+        // call the second bark method
+        dog1.bark("Help me!", 1);
+
+        // call no-arg bark method
+        dog1.bark();
+    }
+
 }
