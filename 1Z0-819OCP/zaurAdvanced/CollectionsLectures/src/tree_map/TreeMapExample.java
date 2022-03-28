@@ -55,6 +55,10 @@ public class TreeMapExample {
         treeMap1.put(st3, 3.3);
         treeMap1.put(st5, 5.5);
         treeMap1.put(st7, 7.7);
-        System.out.println(treeMap1);
+
+
+        Student st8 = new Student("Stan", "Morgan", 2);
+        System.out.println(treeMap1.containsKey(st8));
+//        System.out.println(treeMap1);
     }
 }
