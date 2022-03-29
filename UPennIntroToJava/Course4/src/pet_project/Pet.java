@@ -1,5 +1,7 @@
 package pet_project;
 
+import java.util.ArrayList;
+
 public abstract class Pet {
     // instance variables with default (package-private) access
     int age;
@@ -33,4 +35,21 @@ public abstract class Pet {
     public abstract void makeSound();
 
     public abstract String toString();
+
+
+    public static void main(String[] args) {
+        ArrayList<Pet> pets = new ArrayList<Pet>();
+        Dog dog = new Dog(14, "Buster", 100, "German Shepard");
+        Cat cat = new Cat(3, "Snuggles", 40, "House Cat");
+
+        pets.add(dog);
+        pets.add(cat);
+
+        for(Pet pet : pets){
+            pet.makeSound();
+            System.out.println(pet);
+            System.out.println();
+        }
+
+    }
 }
