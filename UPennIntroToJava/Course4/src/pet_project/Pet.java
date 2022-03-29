@@ -51,5 +51,10 @@ public abstract class Pet {
             System.out.println();
         }
 
+        System.out.println(dog.getBreed() + "'s current weight is: " + dog.getWeight());
+        Food food = new Food(1000);
+        dog.eat(food);
+        System.out.println(dog.getBreed() + "'s current weight is: " + dog.getWeight());
+
     }
 }
