@@ -27,7 +27,9 @@ public class Main {
         for(double d : lineSums){
             sum += d;
         }
-        System.out.println("Sum oof lines: " + sum);
+        System.out.println("Sum of lines: " + sum);
+
+        MyFileWriter.writeFileLineSums("src/file_io/text_line_sums.txt", lineSums, true);
     }
 
 
