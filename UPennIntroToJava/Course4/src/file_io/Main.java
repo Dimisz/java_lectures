@@ -1,6 +1,7 @@
 package file_io;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 /**
  * controller class
@@ -18,5 +19,16 @@ public class Main {
         finally {
             System.out.println("Execution finished");
         }
+
+
+        ArrayList<Double> lineSums = MyFileReader.readFileGetLineSums(fileName);
+        System.out.println(lineSums);
+        double sum = 0;
+        for(double d : lineSums){
+            sum += d;
+        }
+        System.out.println("Sum oof lines: " + sum);
     }
+
+
 }
