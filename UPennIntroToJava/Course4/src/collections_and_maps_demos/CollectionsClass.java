@@ -64,6 +64,18 @@ public class CollectionsClass {
     }
 
 
+    public static Map<String, String> setToppings(Map<String, String> map){
+        // add k-v "bread"-"butter"
+        if(!map.containsKey("bread")){
+            map.put("bread", "butter");
+        }
+
+        if(map.containsKey("ice cream")){
+            map.replace("ice cream", "cherry");
+        }
+        return map;
+    }
+
     public static void main(String[] args) {
         Integer[] removeRangeArray = {7, 9, 4, 2, 7, 7, 5, 3, 5, 1, 7, 8, 6, 7};
         ArrayList<Integer> list = new ArrayList<>();
@@ -92,6 +104,12 @@ public class CollectionsClass {
         String[] words = {"hello", "izzy", "and", "Elise", "and", "Elise", "and"};
         int uniqueWords = CollectionsClass.countUniqueWords(words);
         System.out.println(uniqueWords);
+
+        // set toppings
+        Map<String, String> food = new HashMap<String,String>();
+        food.put("ice cream", "peanuts");
+        Map<String, String> updatedFood = CollectionsClass.setToppings(food);
+        System.out.println(updatedFood);
 
     }
 }
