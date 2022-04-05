@@ -21,13 +21,40 @@ public class CollectionsClass {
             }
         }
     }
+
+    /**
+     * takes a given list and adds a star in the beginning and at the end
+     * @param list
+     */
+    public static void addStars(ArrayList<String> list){
+        String[] array = list.toArray(new String[list.size()]);
+        //empty original ArrayList
+        list.removeAll(Arrays.asList(array));
+
+        // add stars and values back into original arrayList
+        list.add("*");
+        for(String s : array){
+            list.add(s);
+            list.add("*");
+        }
+    }
     public static void main(String[] args) {
         Integer[] removeRangeArray = {7, 9, 4, 2, 7, 7, 5, 3, 5, 1, 7, 8, 6, 7};
         ArrayList<Integer> list = new ArrayList<>();
         list.addAll(Arrays.asList(removeRangeArray));
-        System.out.println(list);
+        System.out.println("Original list: " + list);
         CollectionsClass.removeRange(list, 5, 7);
-        System.out.println(list);
+        System.out.println("After removing elements: " + list);
+
+
+        // addStars
+        String[] addStar = {"the", "quick", "brown", "fox"};
+        // add all items in array to ArrayList
+        ArrayList<String> sList = new ArrayList<>();
+        sList.addAll(Arrays.asList(addStar));
+        System.out.println("Before adding stars: " + sList);
+        CollectionsClass.addStars(sList);
+        System.out.println("After adding stars: " + sList);
 
     }
 }
