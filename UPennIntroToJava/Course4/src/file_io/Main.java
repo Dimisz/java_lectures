@@ -8,6 +8,7 @@ import java.util.ArrayList;
  */
 public class Main {
     public static void main(String[] args) {
+        /*
         String fileName = "src/file_io/text.txt";
         try {
             System.out.println("Total sum: " + MyFileReader.readFileGetTotalSum(fileName));
@@ -30,6 +31,12 @@ public class Main {
         System.out.println("Sum of lines: " + sum);
 
         MyFileWriter.writeFileLineSums("src/file_io/text_line_sums.txt", lineSums, true);
+
+         */
+        ArrayList<String> s = new ArrayList<>();
+        s.add("hello");
+        s.add("world");
+        System.out.println(s.indexOf("mello"));
     }
 
 
