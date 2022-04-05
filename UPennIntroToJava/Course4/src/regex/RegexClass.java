@@ -48,6 +48,10 @@ public class RegexClass {
         return phonePart;
     }
 
+    public static String replaceAreaCode(String phoneNumber, String newAreaCode){
+        return phoneNumber.replaceFirst("[0-9]{4}", newAreaCode);
+    }
+
     public static void main(String[] args) {
         String str = "The cow jumped over the moon";
         String[] tokens = RegexClass.splitString(str, " ");
@@ -70,5 +74,11 @@ public class RegexClass {
         System.out.println("areaCode: " + areaCode);
         System.out.println("prefix: " + prefix);
         System.out.println("number: " + number);
+
+
+        //replace area code
+        String phone = "123-982-6342";
+        String updatedPhone = RegexClass.replaceAreaCode(phone, "8088");
+        System.out.println(updatedPhone);
     }
 }
