@@ -57,6 +57,13 @@ public class CollectionsClass {
         return map;
     }
 
+
+    public static int countUniqueWords(String[] words){
+        Set<String> set = new HashSet<String>(Arrays.asList(words));
+        return set.size();
+    }
+
+
     public static void main(String[] args) {
         Integer[] removeRangeArray = {7, 9, 4, 2, 7, 7, 5, 3, 5, 1, 7, 8, 6, 7};
         ArrayList<Integer> list = new ArrayList<>();
@@ -80,6 +87,11 @@ public class CollectionsClass {
         String[] strings = {"a", "b", "a", "b", "c"};
         Map<String, Integer> map = CollectionsClass.wordCount(strings);
         System.out.println(map);
+
+        //countUniqueWords
+        String[] words = {"hello", "izzy", "and", "Elise", "and", "Elise", "and"};
+        int uniqueWords = CollectionsClass.countUniqueWords(words);
+        System.out.println(uniqueWords);
 
     }
 }
