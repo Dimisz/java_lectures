@@ -1,8 +1,6 @@
 package collections_and_maps_demos;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
+import java.util.*;
 
 public class CollectionsClass {
     /**
@@ -38,6 +36,27 @@ public class CollectionsClass {
             list.add("*");
         }
     }
+
+    /**
+     * takes a given array of strings and returns a map with (String: Count)
+     * @param strings
+     * @return
+     */
+    public static Map<String, Integer> wordCount(String[] strings){
+        Map<String, Integer> map = new HashMap<String, Integer>();
+        // iterate over array of strings
+        for(String s : strings){
+            // if map doesn't contain key -> add it
+            if(!map.containsKey(s)){
+                map.put(s, 1);
+            }
+            else{
+                map.replace(s, map.get(s) + 1);
+            }
+        }
+        return map;
+    }
+
     public static void main(String[] args) {
         Integer[] removeRangeArray = {7, 9, 4, 2, 7, 7, 5, 3, 5, 1, 7, 8, 6, 7};
         ArrayList<Integer> list = new ArrayList<>();
@@ -55,6 +74,12 @@ public class CollectionsClass {
         System.out.println("Before adding stars: " + sList);
         CollectionsClass.addStars(sList);
         System.out.println("After adding stars: " + sList);
+
+
+        // testing wordCount
+        String[] strings = {"a", "b", "a", "b", "c"};
+        Map<String, Integer> map = CollectionsClass.wordCount(strings);
+        System.out.println(map);
 
     }
 }
