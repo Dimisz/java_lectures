@@ -18,8 +18,16 @@ public class ComparatorInterface {
         System.out.println("Before sorting: ");
         System.out.println(employees);
 
-       // Collections.sort(employees);
-        System.out.println("Sorted: ");
+        Collections.sort(employees, new IdComparator());
+        System.out.println("Sorted by id: ");
+        System.out.println(employees);
+
+        Collections.sort(employees, new FirstNameComparator());
+        System.out.println("Sorted by first name: ");
+        System.out.println(employees);
+
+        Collections.sort(employees, new LastNameComparator());
+        System.out.println("Sorted by last name: ");
         System.out.println(employees);
     }
 }
@@ -61,5 +69,19 @@ class IdComparator implements Comparator<Employee1> {
         else{
             return -1;
         }
+    }
+}
+
+class FirstNameComparator implements Comparator<Employee1> {
+    @Override
+    public int compare(Employee1 emp1, Employee1 emp2) {
+        return emp1.firstName.compareTo(emp2.firstName);
+    }
+}
+
+class LastNameComparator implements Comparator<Employee1> {
+    @Override
+    public int compare(Employee1 emp1, Employee1 emp2) {
+        return emp1.secondName.compareTo(emp2.secondName);
     }
 }
